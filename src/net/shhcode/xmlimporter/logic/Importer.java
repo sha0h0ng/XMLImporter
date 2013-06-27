@@ -58,11 +58,13 @@ public class Importer {
                         eElement.getElementsByTagName("shared:bcr_patient_barcode").item(0).getTextContent();
                 String gender = eElement.getElementsByTagName("shared:gender").item(0).getTextContent();
                 String vitalStatus = eElement.getElementsByTagName("shared:vital_status").item(0).getTextContent();
+                String age = eElement.getElementsByTagName("shared:days_to_birth").item(0).getTextContent();
                 //System.out.println("Patient Identifier : " + patientId);
                 //System.out.println("Gender : " + gender);
                 //System.out.println("Vital Status : " + vitalStatus);
                 record.setPatientId(patientId);
                 record.setGender(gender);
+                record.setAge(age);
                 record.setVitalStatus(vitalStatus);
             }
         }
